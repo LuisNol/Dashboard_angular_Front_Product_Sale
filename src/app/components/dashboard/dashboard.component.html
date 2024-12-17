@@ -1,0 +1,48 @@
+<div class="container-fluid mt-4">
+    <div class="row gx-0 mx-0 align-items-start">
+      <!-- Lista de Productos -->
+      <div class="col-md-6 p-0 m-0 custom-column">
+        <app-listar-productos></app-listar-productos>
+      </div>
+  
+      <!-- Lista de Ventas -->
+      <div class="col-md-6 p-0 m-0 custom-column">
+        <app-listar-ventas></app-listar-ventas>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .custom-column {
+      margin: 0; /* Sin márgenes */
+      padding: 0; /* Sin padding */
+      border-right: 1px solid transparent; /* Ajusta visualmente */
+    }
+  
+    app-listar-productos, app-listar-ventas {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+
+
+  
+  <div class="dashboard">
+    <!-- Gráfica de Resumen de Ventas Diarias -->
+    <h2>Resumen de Ventas</h2>
+    <p>Total Ventas: <strong>{{ totalVentas | currency }}</strong></p>
+    <div style="height: 400px; width: 100%;">
+      <canvas id="ventasDiarias"></canvas>
+    </div>
+  </div>
+  
+  <div class="dashboard">
+    <!-- Gráfica de Ventas por Hora -->
+    <h2>Ventas por Hora</h2>
+    <p>Total Ventas: <strong>{{ totalVentas | currency }}</strong></p>
+    <div style="height: 400px; width: 100%;">
+      <canvas id="ventasPorHora"></canvas>
+    </div>
+  </div>
+  
